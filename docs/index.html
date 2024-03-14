@@ -12,7 +12,12 @@
   <body>
     <div class="top-container">
       <div class="top-row">
-        <h1 class="title">Userscripts</h1>
+        <h1 class="title">
+          Userscripts
+          <span class="working">
+            Currently working on this page, scripts do work.
+          </span>
+        </h1>
         <button id="light-dark-button">
           <i class="fa-solid fa-hippo"></i>
         </button>
@@ -31,17 +36,43 @@
         Installation instructions
       </button>
     </div>
-    <div id="center-container-scripts" class="hide">
+    <div id="center-container-scripts">
       <div class="script-container">
-        <h2 class="script-title">Script 1</h2>
+        <h2 class="script-title">puzz.link - Add direct links</h2>
         <p class="script-desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
-          explicabo error tempore vero eius?
+          Adds direct links to all puzzles on the current page. To be opened by
+          clicking the thumbnail.
         </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
+        <div class="link-container">
+          <p class="script-link">
+            https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
+      </div>
+      <div class="script-container">
+        <h2 class="script-title">puzz.link - Add open all button</h2>
+        <p class="script-desc">
+          Adds button to puzz.link database to open all puzzles on the current
+          page.
+          <b>Currently not working without the 'add direct links' script.</b>
         </p>
-        <button><i class="fa-regular fa-copy"></i></button>
+        <div class="link-container">
+          <p class="script-link">
+            https://gist.github.com/ItsStarkJr/1817bcf03146656c6fa976afbf2718e2/raw/add_open_all_button.user.js
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
+      </div>
+      <div class="script-container">
+        <h2 class="script-title">puzz.link - Database styling</h2>
+        <p class="script-desc">Major re-styling of the puzz.link database.</p>
+        <div class="link-container">
+          <p class="script-link">
+            https://gist.github.com/ItsStarkJr/8ade2ee8994b3c8ea3c84e0947338cfe/raw/puzzlink_db_css.user.js
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
       </div>
       <div class="script-container">
         <h2 class="script-title">Script 1</h2>
@@ -49,10 +80,13 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
           explicabo error tempore vero eius?
         </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
-        </p>
-        <button><i class="fa-regular fa-copy"></i></button>
+        <div class="link-container">
+          <p class="script-link">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et,
+            exercitationem.
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
       </div>
       <div class="script-container">
         <h2 class="script-title">Script 1</h2>
@@ -60,10 +94,13 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
           explicabo error tempore vero eius?
         </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
-        </p>
-        <button><i class="fa-regular fa-copy"></i></button>
+        <div class="link-container">
+          <p class="script-link">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ex.
+            Excepturi nemo voluptates tempora corrupti.
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
       </div>
       <div class="script-container">
         <h2 class="script-title">Script 1</h2>
@@ -71,35 +108,16 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
           explicabo error tempore vero eius?
         </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
-        </p>
-        <button><i class="fa-regular fa-copy"></i></button>
-      </div>
-      <div class="script-container">
-        <h2 class="script-title">Script 1</h2>
-        <p class="script-desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
-          explicabo error tempore vero eius?
-        </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
-        </p>
-        <button><i class="fa-regular fa-copy"></i></button>
-      </div>
-      <div class="script-container">
-        <h2 class="script-title">Script 1</h2>
-        <p class="script-desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima optio
-          explicabo error tempore vero eius?
-        </p>
-        <p class="script-link">
-          https://gist.github.com/ItsStarkJr/401f2abafb12e938da79f8c83759be58/raw/add_direct_links.user.js
-        </p>
-        <button><i class="fa-regular fa-copy"></i></button>
+        <div class="link-container">
+          <p class="script-link">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            deleniti?
+          </p>
+          <button><i class="fa-regular fa-copy"></i></button>
+        </div>
       </div>
     </div>
-    <div id="center-container-install">
+    <div id="center-container-install" class="hide">
       <p>Installing a script is quite simple, follow the steps below.</p>
       <div class="list-container">
         <p>
@@ -115,12 +133,12 @@
         <p>
           2. In Tampermonkey, go to <b>Utilities</b> and paste the link to the
           script in <b>Import from URL</b> text area. Do not forget to press
-          <b>Install</b>
+          <b>Install.</b>
         </p>
         <p>
           3. That's it. Now if you want to keep up to date with my
-          <b>very</b> active updating schedule, make sure you set
-          <b>Userscript Update > Check Interval</b> in your Tampermonkey
+          <b><span id="very">very</span></b> active updating schedule, make sure
+          you set <b>Userscript Update > Check Interval</b> in your Tampermonkey
           settings to anything but Never, and it will take care of that for you.
         </p>
         <p>

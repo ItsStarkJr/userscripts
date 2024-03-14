@@ -2,12 +2,20 @@
 /* Variables */
 /* =============================================================================================== */
 :root {
-  --text-color-light-mode: #007bff;
-  --text-hover-color-light-mode: #007bff;
-  --background-color-light-mode: #007bff;
+  --text-color-light-mode: rgb(0, 0, 60);
+  --text-hover-color-light-mode: rgb(151, 151, 151);
+  --background-color-light-mode: linear-gradient(
+    to right,
+    rgb(117, 117, 117),
+    white 100%
+  );
   --text-color-dark-mode: darkgrey;
   --text-hover-color-dark-mode: white;
-  --background-color-dark-mode: rgb(0, 0, 60);
+  --background-color-dark-mode: linear-gradient(
+    to right,
+    black,
+    rgb(81, 81, 81) 100%
+  );
 }
 
 /* =============================================================================================== */
@@ -35,31 +43,48 @@ html::-webkit-scrollbar {
   display: none !important;
 }
 
-body {
-  /*background-image: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--text-color-light-mode);
+  background: white;
+}
 
-  background: var(--background-color-dark-mode);
+::selection {
+  color: var(--text-color-light-mode);
+  background: white;
+}
+
+body {
+  background: var(--background-color-light-mode);
+  color: var(--text-color-light-mode);
   font-family: Courier New;
   -webkit-font-smoothing: antialiased;
-  color: darkgrey;
+}
+
+body.dark {
+  background: var(--background-color-dark-mode);
+  color: var(--text-color-dark-mode);
 }
 
 a {
-  color: var(--text-color-dark-mode);
+  color: var(--text-color-light-mode);
+}
+a.dark {
+  color: var(--text-color-dark-mode) !important;
 }
 a:hover {
-  color: var(--text-hover-color-dark-mode);
+  color: var(--text-hover-color-light-mode);
 }
+a:hover.dark {
+  color: var(--text-hover-color-dark-mode) !important;
+}
+
 /* =============================================================================================== */
 /* Top container */
 /* =============================================================================================== */
 
 .top-container {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: rgba(0, 0, 0, 0.2);
   padding: 2rem;
 }
 
@@ -77,19 +102,18 @@ a:hover {
   font-size: 2rem;
   border: none;
   padding: 7px 5px;
-  color: var(--text-color-dark-mode);
+  color: var(--text-color-light-mode);
   background-color: transparent;
+}
+#light-dark-button.dark {
+  color: var(--text-color-dark-mode);
 }
 
 /* =============================================================================================== */
 /* Switch container */
 /* =============================================================================================== */
 .switch-container {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -119,17 +143,62 @@ a:hover {
 /* =============================================================================================== */
 
 #center-container-scripts {
-  background: red;
+  /* background: red; */
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  margin: 3rem;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .script-container {
   overflow-wrap: break-word;
-  background: green;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.script-container.dark {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.script-desc {
+  margin-top: 1rem;
+}
+
+.link-container {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  background: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  padding-left: 18px;
+  border: 2px solid var(--text-color-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+
+.link-container:hover {
+  background: rgb(60, 60, 60);
+}
+
+.script-link {
+  max-width: calc(100% - 3rem);
+}
+
+.link-container > button {
+  font-size: 1.5rem;
+  padding: 10px;
+  background: transparent;
+  color: var(--text-color-dark-mode);
+  border: none;
+}
+
+.link-container > button:hover {
+  color: white;
 }
 
 /* =============================================================================================== */
@@ -157,6 +226,15 @@ a:hover {
 /* Hide stuff */
 /* =============================================================================================== */
 
+.working {
+  color: red;
+  text-transform: uppercase;
+}
+
 .hide {
   display: none !important;
+}
+
+#very:hover {
+  cursor: pointer;
 }
