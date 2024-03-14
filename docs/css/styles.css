@@ -1,3 +1,162 @@
+/* =============================================================================================== */
+/* Variables */
+/* =============================================================================================== */
+:root {
+  --text-color-light-mode: #007bff;
+  --text-hover-color-light-mode: #007bff;
+  --background-color-light-mode: #007bff;
+  --text-color-dark-mode: darkgrey;
+  --text-hover-color-dark-mode: white;
+  --background-color-dark-mode: rgb(0, 0, 60);
+}
+
+/* =============================================================================================== */
+/* Reset */
+/* =============================================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================================== */
+/* General */
+/* =============================================================================================== */
+
+html {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none !important;
+}
+
 body {
-  color: red;
+  /*background-image: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");*/
+
+  background: var(--background-color-dark-mode);
+  font-family: Courier New;
+  -webkit-font-smoothing: antialiased;
+  color: darkgrey;
+}
+
+a {
+  color: var(--text-color-dark-mode);
+}
+a:hover {
+  color: var(--text-hover-color-dark-mode);
+}
+/* =============================================================================================== */
+/* Top container */
+/* =============================================================================================== */
+
+.top-container {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2rem;
+}
+
+.top-container > hr {
+  margin: 1rem 0;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#light-dark-button {
+  font-size: 2rem;
+  border: none;
+  padding: 7px 5px;
+  color: var(--text-color-dark-mode);
+  background-color: transparent;
+}
+
+/* =============================================================================================== */
+/* Switch container */
+/* =============================================================================================== */
+.switch-container {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: transparent;
+  color: inherit;
+  border: none;
+}
+
+.top-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.top-button-active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =============================================================================================== */
+/* Center container scripts */
+/* =============================================================================================== */
+
+#center-container-scripts {
+  background: red;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.script-container {
+  overflow-wrap: break-word;
+  background: green;
+}
+
+/* =============================================================================================== */
+/* Center container install */
+/* =============================================================================================== */
+
+#center-container-install {
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  width: min(90%, 80rem);
+}
+
+.list-container > img {
+  width: 94%;
+  margin-left: 3%;
+}
+
+.list-container > * {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+/* =============================================================================================== */
+/* Hide stuff */
+/* =============================================================================================== */
+
+.hide {
+  display: none !important;
 }
